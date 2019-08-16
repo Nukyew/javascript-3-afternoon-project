@@ -50,8 +50,19 @@ var employees = [
     3. Return the updated employee array.
 */
 
-//Code Here
+function employeeUpdater() {
+  for (let key in employees){
+    if (employees[key]["firstName"] === "Theo"){
+      delete employees[key]
+    } else if (employees[key]["firstName"] === "Lorie"){
+      employees[key]["department"] = "HR"
+    }
+  }
+  return employees
+}
 
+
+employeeUpdater()
 
 
 ////////// PROBLEM 2 //////////
@@ -68,7 +79,16 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
     3. Return the updated array.
 */
 
-//Code Here
+function removeDuplicates(arr) {
+  for (let i = arr.length - 1; i >= 0; i--){
+    for (let j = arr.length - 1; j >= 0; j--){
+      if (arr[i] === arr[j] && i !== j){
+        arr.splice(i, 1)
+      }
+    }
+  }
+  return arr
+}
 
 
 
