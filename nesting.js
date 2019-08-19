@@ -120,6 +120,9 @@ var cat = {
 var grumpyActivity;
 var fluffy2ndFriend;
 
+grumpyActivity = cat.catFriends[0].activities[1]
+fluffy2ndFriend = cat.catFriends[1].name
+
 
 
 ////////// PROBLEM 4 //////////
@@ -158,7 +161,19 @@ var myCar = {
     3. Change atFaultForAccident from true to false.
 */
 
-//Code Here
+function recordCleaner(myCar){
+  for (let prop in myCar["accidents"]) {
+    for (let prop2 in myCar["accidents"][prop]){
+      if (prop2 === "atFaultForAccident"){
+        myCar["accidents"][prop][prop2] = false
+      }
+    }
+  }
+  return myCar
+}
+
+// The above code runs but specrunner is saying "TypeError: Cannot read property 'accidents' of undefined
+
 
 
 
@@ -177,6 +192,18 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
     4. Return the modified numsArr.
 */
 
-//Code Here
 
+function looper(numsArr) {
+  for (let i = 0; i < numsArr.length; i++){
+    for (let j = numsArr[i].length - 1; j >= 0; j--){
+      if (numsArr[i][j] % 2 === 0) {
+        numsArr[i][j] = "even"
+      } else if (numsArr[i][j] % 2 !== 0) {
+        numsArr[i][j] = "odd"
+      }
+    }
+  }
+  return numsArr
+}
 
+// Same as Problem #4: The above code runs, but specrunner is saying "Looper Array should be filled with "odd" and "even" instead of numbers
