@@ -171,8 +171,7 @@ function recordCleaner(myCar){
   }
   return myCar
 }
-
-// The above code runs but specrunner is saying "TypeError: Cannot read property 'accidents' of undefined
+// The above code runs and solves the problem as needed, but specrunner is saying "TypeError: Cannot read property 'accidents' of undefined
 
 
 
@@ -205,5 +204,4 @@ function looper(numsArr) {
   }
   return numsArr
 }
-
-// Same as Problem #4: The above code runs, but specrunner is saying "Looper Array should be filled with "odd" and "even" instead of numbers
+// Same as Problem #4: The above code runs and solves the problem as needed, but specrunner is saying "Looper Array should be filled with "odd" and "even" instead of numbers
